@@ -1,0 +1,5 @@
+    @{
+        DateTime currentTime = DateTime.Now;
+        <h4>The Current Time is... </h4>
+        <p>@currentTime</p>
+    }

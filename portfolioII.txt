@@ -1,0 +1,78 @@
+    using Microsoft.AspNetCore.Mvc;
+    using System;
+
+    namespace IntroASP.Controllers     //be sure to use your own project's namespace!
+    {
+        // public class HelloController : Controller   //remember inheritance??
+        // {
+        //     //for each route this controller is to handle:
+        //     [HttpGet]       //type of request
+        //     [Route("")]     //associated route string (exclude the leading /)
+        //     public string Index()
+        //     {
+        //         return "Hello World from HelloController!";
+        //     }
+
+        //     [HttpGet]
+        //     [Route("{name}")]
+        //     public string name(string name){
+        //         return $"Hello, this is {name}!";
+        //     }
+
+        //     [HttpGet]
+        //     [Route("pizza/{topping}")]
+        //     public string toppsings(string topping){
+        //         return $"I want {topping} on my pizza!";
+        //     }
+        // }
+
+        // public class UserController : Controller
+        // {
+        //     [HttpGet]
+        //     [Route("/users")]
+        //     public string Users()
+        //     {
+        //         return "This is the user Page";
+        //     }
+        // }
+
+        public class PortfolioController : Controller 
+        {
+            // [HttpGet]
+            // [Route("")]
+            // public ViewResult Index(){
+            //     return View();
+            // }
+
+            [HttpGet("")]
+            public ViewResult Home(){
+                ViewBag.name="Andrew";
+                return View();
+            }
+
+            [HttpGet("projects")]
+            public ViewResult Projects(){
+                ViewBag.name="Andrew";
+                return View();
+            }
+
+            [HttpGet("contact")]
+            public ViewResult Contact(){
+                ViewBag.name="Andrew";
+                return View();
+            }
+            
+            // public RedirectToActionResult Method(){
+            //     return RedirectToAction("OtherMethod", new {Food = "sandwhiches", Quantity = 5});
+            // }
+
+            // [HttpGet]
+            // [Route("other/{Food}/{Quantity}")]
+            // public ViewResult OtherMethod(string Food, int Quantity)
+            // {
+            //     Console.WriteLine($"I ate {Quantity} {Food}");
+            //     return View();
+            // }
+        }
+    }
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>
+        Sup World!
+    </h1>
+    @* testing C# functions *@
+    @{
+        string[] stuff = {"Apple Pie", "Burritos", "Clams Casino", "Donuts"};
+        for (int i = 0; i < stuff.Length; i++)
+        {
+            if(stuff[i].First() =='C'){
+                <p style="color: red;">@stuff[i]</p>
+            } else{
+                <p>@stuff[i]</p>
+            }
+        }
+    }
+    @* testing Date time functions *@
+    @{
+        DateTime currentTime = DateTime.Now;
+        <h4>The Current Time is... </h4>
+        <p>@currentTime</p>
+    }
+</body>
+</html>  
